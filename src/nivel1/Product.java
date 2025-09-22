@@ -1,4 +1,4 @@
-package Nivel1;
+package nivel1;
 public class Product {
     private String name;
     private double price;
@@ -23,7 +23,7 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
-
+@Override
     public String toString() {
         return "Product: name = " + this.name + ", price = " + this.price + ".";
     }

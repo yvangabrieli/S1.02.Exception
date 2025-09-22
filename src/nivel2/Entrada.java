@@ -1,4 +1,4 @@
-package Nivel2;
+package nivel2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

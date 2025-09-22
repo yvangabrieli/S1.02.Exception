@@ -1,4 +1,4 @@
-package Nivel2;
+package nivel2;
 
 
 public class EntradaException extends Exception {

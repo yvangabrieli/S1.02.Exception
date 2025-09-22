@@ -1,4 +1,4 @@
-package Nivel1;
+package nivel1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,8 +14,8 @@ public class Main {
             System.out.println("EmptySaleException caught:" + e.getMessage());
         }
 
-        sale.addProduct(new Product("Book", (double)10.5F));
-        sale.addProduct(new Product("Tablet", (double)1250.5F));
+        sale.addProduct(new Product("Book", (double)10.5));
+        sale.addProduct(new Product("Tablet", (double)1250.5));
         sale.addProduct(new Product("Laptop", 1950.65));
 
         try {
@@ -26,8 +26,8 @@ public class Main {
         }
 
         List<Product> productList = new ArrayList<>();
-        productList.add(new Product("Headphones", (double)150.5F));
-        productList.add(new Product("Tablet", (double)1250.5F));
+        productList.add(new Product("Headphones", (double)150.5));
+        productList.add(new Product("Tablet", (double)1250.5));
         productList.add(new Product("Laptop", 1850.65));
 
         try {
