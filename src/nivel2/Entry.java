@@ -3,7 +3,7 @@ package nivel2;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Entrada {
+public class Entry {
     private static final Scanner sc;
 
     public static byte readByte(String message) {
@@ -65,7 +65,7 @@ public class Entrada {
         }
     }
 
-    public static char readChar(String message) throws EntradaException {
+    public static char readChar(String message) throws EntryException {
         while(true) {
             System.out.println(message);
             String letter = sc.nextLine();
@@ -75,14 +75,14 @@ public class Entrada {
                     return letter.charAt(0);
                 }
 
-                throw new EntradaException("You must enter a single character");
-            } catch (EntradaException e) {
+                throw new EntryException("You must enter a single character");
+            } catch (EntryException e) {
                 System.out.println("Format ERROR: " + e.getMessage());
             }
         }
     }
 
-    public static String readString(String message) throws EntradaException {
+    public static String readString(String message) throws EntryException {
         while(true) {
             System.out.println(message);
             String word = sc.nextLine();
@@ -92,14 +92,14 @@ public class Entrada {
                     return word;
                 }
 
-                throw new EntradaException("The String cannot be empty.");
-            } catch (EntradaException e) {
+                throw new EntryException("The String cannot be empty.");
+            } catch (EntryException e) {
                 System.out.println("Format ERROR: " + e.getMessage());
             }
         }
     }
 
-    public static Boolean readBoolean(String message) throws EntradaException {
+    public static Boolean readBoolean(String message) throws EntryException {
         while(true) {
             System.out.println(message);
             String input = sc.nextLine().trim().toLowerCase();
@@ -113,8 +113,8 @@ public class Entrada {
                     return false;
                 }
 
-                throw new EntradaException("You must enter 's' or 'n'.");
-            } catch (EntradaException e) {
+                throw new EntryException("You must enter 's' or 'n'.");
+            } catch (EntryException e) {
                 System.out.println("Format ERROR" + e.getMessage());
             }
         }

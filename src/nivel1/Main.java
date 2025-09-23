@@ -14,16 +14,17 @@ public class Main {
             System.out.println("EmptySaleException caught:" + e.getMessage());
         }
 
-        sale.addProduct(new Product("Book", (double)10.5));
-        sale.addProduct(new Product("Tablet", (double)1250.5));
+        sale.addProduct(new Product("Book", (double) 10.5));
+        sale.addProduct(new Product("Tablet", (double) 1250.5));
         sale.addProduct(new Product("Laptop", 1950.65));
 
-        try {
-            sale.calculateTotalPrice();
-            System.out.println("The total after adding product is :" + sale.getTotalPrice());
-        } catch (EmptySaleException e) {
-            System.out.println("Unexpected exception: " + e.getMessage());
-        }
+            try {
+                sale.calculateTotalPrice();
+                System.out.println("The total after adding product is :" + sale.getTotalPrice());
+            } catch (EmptySaleException e) {
+                System.out.println("Unexpected exception: " + e.getMessage());
+            }
+
 
         List<Product> productList = new ArrayList<>();
         productList.add(new Product("Headphones", (double)150.5));
